@@ -78,6 +78,8 @@ class BSTable {
     // Process "addButton" parameter
     if (this.options.$addButton != null) {
       let _this = this;
+      //Remove all onclicks
+      this.options.$addButton.off("click");
       // Add a managed onclick event to the button
       this.options.$addButton.click(function() {
         _this._actionAddRow();
